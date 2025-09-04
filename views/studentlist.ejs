@@ -1,0 +1,44 @@
+<%- include('./base/header.ejs') %>   
+<%- include('./base/nave.ejs') %>  
+
+<div class="container">
+    <div class="alert text-center bg-primary my-3" style="color:white">
+        <h4>Student List</h4>
+    </div>
+</div>
+<div class="container">
+    <table class="table text-center">
+        <thead>
+            <tr>
+                <th>Student Photo</th>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Father Name</th>
+                <th>Course</th>
+                <th>Branch</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% students.forEach((student)=>{ %>
+                  <tr>
+                    <td><img src="<%= student.studentImage %>" width="50px" height="50px"></img></td>
+                    <td><%= student.rollNo%></td>
+                    <td><%= student.studentName%></td>
+                    <td><%= student.fatherName%></td>
+                    <td><%= student.course%></td>
+                    <td><%= student.branch%></td>
+                    <td>
+                        <a href="">Edit</a>
+                        <a href="/delete/student/<%= student._id %>" class="btn btn-danger">Delete</a>
+                    </td>
+                  </tr>
+                  
+            
+         <% })%>
+
+        </tbody>
+
+    </table>
+</div>
+<%- include('./base/footer.ejs') %>   

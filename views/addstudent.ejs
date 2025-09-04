@@ -1,0 +1,73 @@
+<%- include('./base/header.ejs') %>  
+<%- include('./base/nave.ejs') %>  
+<div class="container">
+    <div class="alert text-center bg-primary my-3" style="color:white">
+        <h4>Add Student</h4>
+    </div>
+  </div>
+    <div class="container">
+    <div class="row">
+        <div class="col">
+
+        </div>
+        <div class="col">
+           <form action="/add/student" method="post" enctype="multipart/form-data">
+            <div>
+                <label class="form-label">Roll No</label>
+                <input type="text" class="form-control" name = "rollNo"></input>
+            </div>
+
+             <div>
+                <label class="form-label">Student Name</label>
+                <input type="text" class="form-control" name="studentName"></input>
+            </div>
+            <div>
+               <label class="form-label">Father Name</label>
+                <input type="text" class="form-control" name="fatherName"></input> 
+            </div>
+            <div>
+              
+           <label class="form-label">Course</label>
+          <select class="form-select" name="course" required>
+          <option value="" disabled selected>Select your course</option>
+          <option value="B.Tech">B.Tech</option>
+          <option value="M.Tech">M.Tech</option>
+          <option value="BCA">BCA</option>
+          <option value="MCA">MCA</option>
+          <option value="B.Sc">B.Sc</option>
+          <option value="M.Sc">M.Sc</option>
+        </select>
+</div>
+
+
+        <label class="form-label">Branch</label>
+       <select class="form-select" name="branch" required>
+       <option value="" disabled selected>Select your branch</option>
+       <option value="CSE">Computer Science & Engineering (CSE)</option>
+       <option value="IT">Information Technology (IT)</option>
+       <option value="ECE">Electronics & Communication (ECE)</option>
+       <option value="EE">Electrical Engineering (EE)</option>
+       <option value="ME">Mechanical Engineering (ME)</option>
+       <option value="CE">Civil Engineering (CE)</option>
+    </select>
+
+
+
+  <label class="form-label">Year Of Admission</label>
+  <input type="number" class="form-control" name="yearOfAdmission" placeholder="YYYY" min="2000" max="2026" required>
+  <div>
+    <label class="form-label">Select Student Image</label>
+    <input type="file" class="form-control" name="studentImage"></input> 
+   </div>
+
+            <input type="submit" value="Add Student" class="btn btn-warning w-100 my-3">
+        </input>
+           </form>
+        </div>
+        <div class="col">
+
+        </div>
+    </div>
+  </div>
+
+<%- include('./base/footer.ejs') %>   

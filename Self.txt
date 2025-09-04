@@ -1,0 +1,20 @@
+
+npm init -y
+npm i express
+npm i mongoose
+npm i ejs
+npm i mongoose-timestamps
+
+npm i multer 
+npm i cloudinary
+go to google then search bootstrap5 then css and body link copy paste
+
+npm i bcrypt //for encrypt the data such as password
+
+rollNo
+Name
+fatherName
+course
+branch
+yearOfAdmission
+

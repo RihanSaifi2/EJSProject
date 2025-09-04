@@ -1,0 +1,45 @@
+<%- include('./base/header.ejs') %>   
+
+<div class="container d-flex align-items-center justify-content-center" style="min-height:100vh;">
+  <div class="row w-100 justify-content-center">
+    <div class="col-md-6 col-lg-5">
+      
+      <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-header bg-primary text-white text-center py-3">
+          <h4 class="mb-0">Sign Up Form</h4>
+        </div>
+        
+        <div class="card-body p-4">
+          <form action="/add/user" method="post">
+
+            <div class="mb-3">
+              <label class="form-label">First Name</label>
+              <input type="text" class="form-control" name="firstName" placeholder="Enter your first name" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Last Name</label>
+              <input type="text" class="form-control" name="lastName" placeholder="Enter your last name" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <button type="submit" class="btn btn-success w-100 my-2">Sign Up</button>
+            <a href="/login" class="btn btn-outline-primary w-100">Already have an account? Login</a>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<%- include('./base/footer.ejs') %>   
